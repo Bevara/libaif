@@ -1,0 +1,20 @@
+{
+    "name": "libaiff",
+    "description": "AIFF audio decoder",
+    "filters":["aiffdec","rfaiff"],
+    "help": "This filter decodes AIFF/AIFC audio files using libaiff.",
+    "support": [
+        "audio"
+    ],
+    "sources":"https://bevara.ddns.net/sources/libaiff.accessor",
+    "filter_source":{
+        "aiffdec" : "dec_aiff.c",
+        "rfaiff" : "reframe_aiff.c"
+    },
+    "extension":{
+      "aif" : "audio",
+      "aiff" : "audio",
+      "aifc" : "audio"
+    },
+    "licence_required":false
+}
