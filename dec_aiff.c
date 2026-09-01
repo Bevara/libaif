@@ -189,7 +189,7 @@ GF_FilterRegister AIFFDecoderRegister = {
 	.process = aiffdec_process,
 };
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_aiffdec_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE aiffdec_register(GF_FilterSession *session)
 {
 	return &AIFFDecoderRegister;
 }
@@ -197,5 +197,5 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_aiffdec_register(GF_Filte
 #include "filter_register.h"
 __attribute__((constructor))
 void register_aiffdec(void) {
-    gf_filter_auto_register("aiffdec", dynCall_aiffdec_register);
+    gf_filter_auto_register("aiffdec", aiffdec_register);
 }

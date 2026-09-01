@@ -188,7 +188,7 @@ GF_FilterRegister ReframeAiffRegister = {
 	.process = rfaiff_process,
 	.process_event = rfaiff_process_event};
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_aiff_reframe_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE aiff_reframe_register(GF_FilterSession *session)
 {
 	return &ReframeAiffRegister;
 }
@@ -196,5 +196,5 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_aiff_reframe_register(GF_
 #include "filter_register.h"
 __attribute__((constructor))
 void register_aiff_reframe(void) {
-    gf_filter_auto_register("aiff_reframe", dynCall_aiff_reframe_register);
+    gf_filter_auto_register("aiff_reframe", aiff_reframe_register);
 }
