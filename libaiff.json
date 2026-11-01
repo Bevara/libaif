@@ -1,5 +1,6 @@
 {
     "name": "libaiff",
+    "version": "1.0.1",
     "description": "AIFF audio decoder",
     "filters":["aiffdec","rfaiff"],
     "help": "This filter decodes AIFF/AIFC audio files using libaiff.",
@@ -16,6 +17,10 @@
       "aiff" : "audio",
       "aifc" : "audio"
     },
-    "licence_required":false,
-    "using": ["solver_minimal_1", "solver_1"]
+    "using": ["mm_solver_minimal_1.0.1", "mm_solver_1.0.1"],
+    "patents": {
+        "status": "royalty-free",
+        "note": "AIFF carries uncompressed PCM (and IMA/ULAW variants); no patent pool",
+        "checked": "2026-10-17"
+    }
 }
